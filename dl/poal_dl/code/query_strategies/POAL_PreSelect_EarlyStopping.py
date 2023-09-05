@@ -399,7 +399,7 @@ def normal_pareto_optimization(infor_value1, infor_value2):
 				continue
 			else:
 				# deleteIndex = fitness[0: popSize, 0] >= offspringFit[0] * fitness[0: popSize, 1] >= offspringFit[1]
-				index = [i for i in range(len(optimal_set))]
+				index = [ind for ind in range(len(optimal_set))]
 				condi_1 = np.where(optimal_set_value1 <= infor_value1[i])
 				condi_2 = np.where(optimal_set_value2 <= infor_value2[i])
 				deleteIndex = [val for val in condi_1[0] if val in condi_2[0]] 
